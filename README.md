@@ -8,7 +8,7 @@ Este projeto implementa um banco de dados relacional completo para um sistema de
 
 | Arquivo | Descrição |
 |----------|------------|
-| **01_schema.sql** | Criação do schema `ecommerce_db`, tabelas, chaves estrangeiras e *triggers* automáticos. |
+| **01_schema.sql** | Criação do schema `ecommerce_db`, tabelas, chaves estrangeiras. |
 | **02_seed_data.sql** | Inserção de dados fictícios (~1.200 registros) com nomes realistas e relações coerentes. |
 | **03_validation_checks.sql** | Script de verificação da integridade e consistência dos dados. |
 
@@ -62,7 +62,6 @@ Se todas as verificações retornarem 0 violações, os dados foram carregados c
 
 ## Observações Técnicas
 * Compatível com MySQL 8+.
-* Todos os triggers e constraints foram testados para evitar inconsistências.
 * Os dados fictícios foram gerados com base em distribuições realistas de preços, datas e categorias.
 * Pode ser usado como base para projetos de Power BI, ETL/EDA e análise de vendas.
 
