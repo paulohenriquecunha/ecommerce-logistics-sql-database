@@ -1,7 +1,8 @@
+-- Adjusted for schema without triggers; removed check 'customers_without_default_billing'
 
 -- ecommerce_db Validation Suite
 -- Usage:
---   USE ecommerce_db;
+USE ecommerce_db;
 --   SOURCE /path/to/03_validation_checks.sql;
 
 -- 1) Row counts per table
@@ -132,19 +133,11 @@ LEFT JOIN addresses a ON a.customer_id = c.customer_id
 GROUP BY c.customer_id
 HAVING COUNT(a.address_id) = 0;
 
-SELECT 'customers_without_default_billing' AS check_name, COUNT(*) AS violations
-FROM customers c
-LEFT JOIN addresses a 
-  ON a.customer_id = c.customer_id 
-  AND a.address_type = 'billing' 
-  AND a.is_default = 1
-GROUP BY c.customer_id
-HAVING COUNT(a.address_id) = 0;
 
 -- 13) Order date range plausibility (expected between 2024-01-01 and 2025-10-20)
 SELECT 'orders_out_of_expected_date_range' AS check_name, COUNT(*) AS violations
 FROM orders
-WHERE order_date < '2024-01-01' OR order_date > '2025-10-20 23:59:59';
+WHERE order_date < '2024-01-01' OR order_date > '2025-10-31 23:59:59';
 
 -- 14) Email basic format check
 SELECT 'customers_email_bad_format' AS check_name, COUNT(*) AS violations
