@@ -8,7 +8,7 @@ This project implements a complete **relational database** for an **e-commerce s
 
 | File | Description |
 |------|-------------|
-| **01_schema.sql** | Creates the `ecommerce_db` schema, tables, foreign keys, and triggers. |
+| **01_schema.sql** | Creates the `ecommerce_db` schema, tables, foreign keys. |
 | **02_seed_data.sql** | Inserts realistic sample data (~1,200 records) with coherent relationships. |
 | **03_validation_checks.sql** | Runs validation tests to check data integrity and consistency. |
 
@@ -62,7 +62,6 @@ If all checks return 0 violations, your database is fully consistent.
 
 ## Technical Notes
 * Compatible with MySQL 8+
-* Triggers and constraints are validated to ensure data consistency
 * Seed data generated using realistic distributions of prices, categories, and dates
 * Suitable for ETL/EDA projects, Power BI dashboards, or sales analysis
 
