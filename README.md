@@ -71,3 +71,10 @@ Se todas as verificações retornarem 0 violações, os dados foram carregados c
 **Paulo Henrique P. Cunha**
 Analista de Dados | Desenvolvedor Web
 LinkedIn: www.linkedin.com/in/paulo-henrique-p-cunha/
+
+## Leia mais
+
+Artigos praticos no [blog da PC Data Insights](https://pcdatainsights.com/blog):
+
+- [O que e ETL e por que a sua empresa precisa disso](https://pcdatainsights.com/blog/o-que-e-etl-empresa)
+- [Analise de dados para PMEs – o guia completo](https://pcdatainsights.com/blog/analise-de-dados-para-pmes-guia-completo)
